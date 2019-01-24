@@ -22,13 +22,13 @@ class Game
   def cell_choice
     return @view.play.to_i
   end
-  
+
   def get_value_of_a_cell(number)
-    @board.get_value_of_one_cell(number-1) 
+    @board.get_value_of_one_cell(number-1)
   end
 
   def set_value_of_a_cell(number)
-    @board.set_value_of_one_cell(number-1, @player1.get_symbol) 
+    @board.set_value_of_one_cell(number-1, @player1.get_symbol)
   end
 
   def switch
@@ -53,16 +53,16 @@ class Game
     return combinations
   end
 
-  def compare_the_combinations # Fonction qui vérifie 
+  def compare_the_combinations # Fonction qui vérifie
     winning_combinations.size.times do |i|
       if winning_combinations[i].to_s == "XXX" || winning_combinations[i].to_s == "OOO"
-        return valeur = true 
+        return valeur = true
       end
     end
     return false
   end
 
-  
+
   def play
     i = 0 # J'intialise le compteur à 0
     stop = false
@@ -77,7 +77,7 @@ class Game
       switch # On change de joueur
       i += 1 # On incrémente i
       if i > 8 && stop == false # On vérifie le nombre de tours et que le stop est toujours faux
-        puts "Egalité ! Personne n'a gagné :( Prend un BN !" # Les deux conditions déclenchent l'égalité
+        puts "Egalité ! Personne n'a gagné :( Prend un curly !" # Les deux conditions déclenchent l'égalité
         return
       end
     end
@@ -88,4 +88,3 @@ class Game
   end
 
 end # fin de la classe
-

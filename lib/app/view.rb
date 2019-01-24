@@ -1,13 +1,16 @@
 class View
   def initialize
     puts ""
-    puts "Bonjour et bienvenue dans le Morpion d'Antonin et Raph".blue
+    puts "
+    --------------------------------------------------
+         \u{274c} BIENVENUE DANS MON SUPER MORPION \u{2B55}
+    --------------------------------------------------".cyan
   end
 
   def self.get_name_and_symbol
     puts ""
     puts "Choisis un nom :)"
-    print "> ".green
+    print "> ".green #couleur
     player_name = gets.chomp.to_s
     # puts "Ok #{player_name}"
     puts ""
